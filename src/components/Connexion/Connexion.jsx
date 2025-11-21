@@ -13,6 +13,7 @@ function Connexion({ setConected,setShow }) {
     if (data.identifiant !== "said") {
       setErreurs({ erreurs, identifiant: true });
     } else if (data.password !== "said2003") {
+        setErreurs({ erreurs, identifiant: false })
       setErreurs({ ...erreurs, password: true });
     } else {
       setConected(true);
@@ -27,7 +28,7 @@ function Connexion({ setConected,setShow }) {
           type="text"
           id="identifiant"
           name="identifiant"
-          onChange={(e) => setData({ ...data, identifiant: e.target.value })}
+          onChange={(e) => setData({ ...data, identifiant: e.target.value.trim() })}
         />
         {erreurs.identifiant && (
           <p className="erreur">Votre identifiant est incorrect</p>
@@ -37,7 +38,7 @@ function Connexion({ setConected,setShow }) {
           type="password"
           id="password"
           name="password"
-          onChange={(e) => setData({ ...data, password: e.target.value })}
+          onChange={(e) => setData({ ...data, password: e.target.value.trim() })}
         />
         {erreurs.password && (
           <p className="erreur">Votre mot de passe est incorrect</p>
