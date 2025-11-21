@@ -1,0 +1,41 @@
+.home {
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 35%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.home h1 {
+  margin-bottom: 15px;
+}
+
+.welcome {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.welcome span {
+  font-weight: 600;
+  color: #03a464;
+}
+
+.instructions {
+  font-size: 14px;
+  color: #4d5270;
+  margin-bottom: 25px;
+}
+
+.logout {
+  border: none;
+  color: #fff;
+  background: #01e267;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
