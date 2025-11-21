@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaKey } from "react-icons/fa";
 
 import "./Connexion.css";
-function Connexion({ setConected,setShow }) {
+function Connexion({ setConected,setShow ,user}) {
   const [data, setData] = useState({ identifiant: "", password: "" });
   const [erreurs, setErreurs] = useState({
     identifiant: false,
@@ -10,9 +10,9 @@ function Connexion({ setConected,setShow }) {
   });
   function VerfierData(event) {
     event.preventDefault();
-    if (data.identifiant !== "said") {
+    if (data.identifiant !== user.user && user.user!=="") {
       setErreurs({ erreurs, identifiant: true });
-    } else if (data.password !== "said2003") {
+    } else if (data.password !== user.password && user.password!=="") {
         setErreurs({ erreurs, identifiant: false })
       setErreurs({ ...erreurs, password: true });
     } else {
@@ -47,12 +47,12 @@ function Connexion({ setConected,setShow }) {
           Se connecter
         </button>
       </form>
-      <div
-        className="icons"
+      <p
+        className="link"
         onClick={() => setShow(p=>!p)}
       >
-        <FaKey />
-      </div>
+        I don't have account
+      </p>
       
     </div>
   );

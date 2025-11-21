@@ -6,7 +6,7 @@ function Home({ user, setConected }) {
     <div className="home">
       <h1>Espace membre</h1>
       <p className="welcome">
-        Bonjour <span>{user}</span>, vous êtes connecté.
+        Bonjour <span>{user.user}</span>, vous êtes connecté.
       </p>
       <p className="instructions">
         Cliquez sur le bouton ci-dessous pour vous déconnecter en toute

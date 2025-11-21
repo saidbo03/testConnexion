@@ -1,24 +1,22 @@
-.container{
+.container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  padding: 40px 0;
   position: relative;
 }
-.show {
-  margin-top: 10px;
-  width: 35%;
-  padding: 10px 15px;
-  border: 1px dashed #159b51;
-  border-radius: 6px;
-  font-size: 14px;
-  background: #f6fdf9;
-  text-align: center;
-  position: absolute;
-  top: 5%;
+
+.link{
+  margin: 10px 0px;
+  font-style: italic;
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.show span {
-  font-weight: 600;
+.link:hover{
+  color:#01e267;
 }
